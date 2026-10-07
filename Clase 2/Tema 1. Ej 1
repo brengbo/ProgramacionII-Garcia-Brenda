@@ -1,0 +1,31 @@
+public class EjerciciosMetodos{
+
+    public static void tablaDeMultiplicar(int n){ 
+        System.out.println("Esta es la tabla del: " + n);
+        for (int i=1;i<=10;i++){
+            System.out.println(n*i);
+        }
+    }
+
+    public static double promedio(int[]valores){
+        int suma = 0;
+        for (int i = 0; i < valores.length; i++){
+            suma=suma + valores[i];
+        }
+        return (double) suma/valores.length;
+    }
+
+    public static void main (String[]args){ //invocar ambos metodos
+        tablaDeMultiplicar(9);
+
+        int [] notas = {10,6,5,2,10};
+        double resultado = promedio(notas);
+        System.out.println("El promedio es: " + resultado);
+    }
+
+}
+
+//la tabla de multiplicar sería el procedimiento pq no devuelve ningun valor, solo muetra por pantalla la tabla.
+// y el promedio sería la función pq realiza un calculo que retorna un valor.
+//en java no existe tal distinción pq existen los metodos encapsulado dentro de una clase.
+//si el método devuelve un valor, se indica el tipo de dato, si no devuleve nada se usa la palabra reservada void.
